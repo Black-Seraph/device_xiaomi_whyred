@@ -4,3 +4,4 @@ allow system_server vendor_framework_file:dir { getattr search };
 allow system_server vendor_keylayout_file:file r_file_perms;
 allow system_server sysfs_vibrator:file read;
 allow system_server vendor_default_prop:file { getattr open read };
+allow system_server init:binder { call };
