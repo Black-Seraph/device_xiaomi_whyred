@@ -21,7 +21,7 @@
 # definition file).
 #
 
-$(call inherit-product, vendor/xiaomi/whyred/whyred-vendor.mk)
+$(call inherit-product, vendor/xiaomi/nitrogen/nitrogen-vendor.mk)
 
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
@@ -119,7 +119,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/listen_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/listen_platform_info.xml \
     $(LOCAL_PATH)/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
     $(LOCAL_PATH)/audio/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml \
-    $(LOCAL_PATH)/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml
+    $(LOCAL_PATH)/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml \
+    $(LOCAL_PATH)/audio/tas2559_aac_r.ftcfg:$(TARGET_COPY_OUT_VENDOR)/etc/tas2559_aac_r.ftcfg \
+    $(LOCAL_PATH)/audio/tas2559_goer_r.ftcfg:$(TARGET_COPY_OUT_VENDOR)/etc/tas2559_goer_r.ftcfg \
+    $(LOCAL_PATH)/audio/tas2559_l.ftcfg:$(TARGET_COPY_OUT_VENDOR)/etc/tas2559_l.ftcfg
 
 PRODUCT_COPY_FILES += \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:/$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
@@ -191,7 +194,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint feature
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_whyred
+    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_nitrogen
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
@@ -295,7 +298,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.xiaomi_whyred
+    android.hardware.light@2.0-service.xiaomi_nitrogen
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -382,7 +385,7 @@ PRODUCT_PACKAGES += \
 
 # Recovery
 PRODUCT_PACKAGES += \
-    librecovery_updater_whyred
+    librecovery_updater_nitrogen
 
 # RIL
 PRODUCT_PACKAGES += \

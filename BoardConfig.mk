@@ -21,7 +21,7 @@
 # definition file).
 #
 
-DEVICE_PATH := device/xiaomi/whyred
+DEVICE_PATH := device/xiaomi/nitrogen
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sdm660
@@ -50,7 +50,7 @@ TARGET_USES_64_BIT_BINDER := true
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc170000 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 swiotlb=1 androidboot.configfs=true androidboot.usbcontroller=a800000.dwc3
 BOARD_KERNEL_CMDLINE += loop.max_part=7
-# BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
@@ -58,10 +58,10 @@ BOARD_RAMDISK_OFFSET     := 0x01000000
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/xiaomi/whyred
-TARGET_KERNEL_CONFIG := whyred_defconfig
-TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := r353983c
+TARGET_KERNEL_SOURCE := kernel/xiaomi/nitrogen
+TARGET_KERNEL_CONFIG := nitrogen_defconfig
+TARGET_KERNEL_CLANG_COMPILE := false
+#TARGET_KERNEL_CLANG_VERSION := r353983c
 
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
@@ -71,7 +71,7 @@ BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
 # Assert
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
-TARGET_OTA_ASSERT_DEVICE := whyred
+TARGET_OTA_ASSERT_DEVICE := nitrogen
 
 # APEX image
 DEXPREOPT_GENERATE_APEX_IMAGE := true
@@ -157,7 +157,7 @@ VSYNC_EVENT_PHASE_OFFSET_NS := 2000000
 TARGET_ENABLE_MEDIADRM_64 := true
 
 # DT2W
-TARGET_TAP_TO_WAKE_NODE := "/sys/class/input/input2/wake_gesture"
+TARGET_TAP_TO_WAKE_NODE := "/proc/gt9xx_dt2w"
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
@@ -187,8 +187,8 @@ TARGET_PROVIDES_KEYMASTER := true
 TARGET_USES_MEDIA_EXTENSIONS := true
 
 # Vendor init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_whyred
-TARGET_RECOVERY_DEVICE_MODULES := libinit_whyred
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_nitrogen
+TARGET_RECOVERY_DEVICE_MODULES := libinit_nitrogen
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x04000000
@@ -218,7 +218,7 @@ TARGET_USES_INTERACTION_BOOST := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/recovery.fstab
 
 # Releasetools
-TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_whyred
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_nitrogen
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # Power
@@ -251,8 +251,8 @@ PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_VENDOR_MOVE_ENABLED := true
 
 # Vendor init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_whyred
-TARGET_RECOVERY_DEVICE_MODULES := libinit_whyred
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_nitrogen
+TARGET_RECOVERY_DEVICE_MODULES := libinit_nitrogen
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
@@ -282,4 +282,4 @@ ifeq ($(HOST_OS),linux)
 endif
 
 # inherit from the proprietary version
--include vendor/xiaomi/whyred/BoardConfigVendor.mk
+-include vendor/xiaomi/nitrogen/BoardConfigVendor.mk

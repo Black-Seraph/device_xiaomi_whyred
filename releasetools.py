@@ -31,7 +31,7 @@ def AddTrustZoneAssertion(info, input_zip):
   if m:
     tz_version, build_version = m.group(1).split('|')
     if tz_version and '*' not in tz_version:
-      cmd = ('assert(whyred.verify_trustzone("{}") == "1" || abort("Modem firmware '
+      cmd = ('assert(nitrogen.verify_trustzone("{}") == "1" || abort("Modem firmware '
                    'from {} or newer stock ROMs is prerequisite to be compatible '
                    'with this build."););'.format(tz_version, build_version))
       info.script.AppendExtra(cmd)

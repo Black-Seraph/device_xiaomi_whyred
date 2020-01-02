@@ -40,7 +40,7 @@
     <item name="cpu.active">1</item>
     <item name="cpu.cluster_power.cluster0">1</item>
     <item name="cpu.cluster_power.cluster1">1</item>
-    <item name="battery.capacity">4000</item>
+    <item name="battery.capacity">5500</item>
     <item name="bluetooth.active">80</item>
     <item name="bluetooth.at">2</item>
     <item name="bluetooth.on">2</item>

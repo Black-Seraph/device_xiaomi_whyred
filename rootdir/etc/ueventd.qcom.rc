@@ -55,7 +55,7 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/dpl_ctrl             0660   usb        usb
 /dev/ipa_odl_ctl          0660   radio      radio
 /dev/ipa_adpl             0660   system     oem_2905
-/dev/spidev7.1            0660   system	    system
+/dev/lirc0                0660   system	    system
 #permissions for CSVT
 /dev/smd11                0660   radio      radio
 
@@ -150,10 +150,10 @@ firmware_directories /vendor/firmware_mnt/image/
 #QDSS
 /dev/byte-cntr            0660   system    oem_2902
 # fpc fingerprint
-/sys/devices/soc/soc:fpc1020*   hw_reset 0660 system system
-/sys/devices/soc/soc:fpc1020*   irq 0660 system system
-/sys/devices/soc/soc:fpc1020*   wakeup_enable 0660 system system
-/sys/devices/soc/soc:fpc1020*    fingerdown_wait 0220 system system
+/sys/devices/soc/soc:fingerprint_fpc*   hw_reset 0660 system system
+/sys/devices/soc/soc:fingerprint_fpc*   irq 0660 system system
+/sys/devices/soc/soc:fingerprint_fpc*   wakeup_enable 0660 system system
+/sys/devices/soc/soc:fingerprint_fpc*   fingerdown_wait 0220 system system
 
 /sys/class/leds/red      delay_on     0640    system    system
 /sys/class/leds/red      delay_off    0640    system    system
@@ -164,6 +164,9 @@ firmware_directories /vendor/firmware_mnt/image/
 /sys/class/leds/blue     delay_on     0640    system    system
 /sys/class/leds/blue     delay_off    0640    system    system
 /sys/class/leds/blue     breath       0640    system    system
+/sys/class/leds/white    delay_on     0640    system    system
+/sys/class/leds/white    delay_off    0640    system    system
+/sys/class/leds/white    breath       0640    system    system
 
 # wlan
 /dev/wcnss_wlan           0660   system     system

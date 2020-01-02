@@ -6,5 +6,5 @@ LOCAL_C_INCLUDES := \
     bootable/recovery/edify/include \
     bootable/recovery/otautil/include
 LOCAL_SRC_FILES := recovery_updater.cpp
-LOCAL_MODULE := librecovery_updater_whyred
+LOCAL_MODULE := librecovery_updater_nitrogen
 include $(BUILD_STATIC_LIBRARY)

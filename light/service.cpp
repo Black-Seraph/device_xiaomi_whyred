@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.light@2.0-service.xiaomi_whyred"
+#define LOG_TAG "android.hardware.light@2.0-service.xiaomi_nitrogen"
 
 #include <hidl/HidlTransportSupport.h>
 

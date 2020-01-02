@@ -214,7 +214,7 @@ persist.vendor.camera.linkpreview=0
 persist.vendor.camera.isp.turbo=1
 #exif info for camera
 persist.vendor.camera.exif.make=Xiaomi
-persist.vendor.camera.exif.model=Redmi Note 5
+persist.vendor.camera.exif.model=MiMax3
 persist.vendor.camera.expose.aux=1
 
 #enable video face detect func

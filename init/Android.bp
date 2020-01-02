@@ -15,9 +15,9 @@
 //
 
 cc_library_static {
-    name: "libinit_whyred",
+    name: "libinit_nitrogen",
     recovery_available: true,
-    srcs: ["init_whyred.cpp"],
+    srcs: ["init_nitrogen.cpp"],
     include_dirs: [
         "system/core/base/include",
         "system/core/init"
